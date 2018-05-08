@@ -287,7 +287,11 @@ const ChartSet = {
 export class ChartView extends Component {
 	
 	render() {
-		const chartType = 'year';
+		
+		
+		const randomChartType = ['year','quater','pyear','pquater','cyear','cquater'];
+		const chartType = randomChartType[random(0,randomChartType.length)];
+		
 		const typeName = chartType=='year' || chartType=='quater' ? 'bar' : 'pie';
 		var ChartType = ChartSet[typeName];
 		let chartData;
